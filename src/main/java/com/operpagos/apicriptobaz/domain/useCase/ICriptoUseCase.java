@@ -4,8 +4,8 @@ import com.operpagos.apicriptobaz.domain.dto.CriptoResponseDto;
 
 public interface ICriptoUseCase {
 
-    CriptoResponseDto encript(String txt);
+    CriptoResponseDto encrypt(String txt);
 
-    CriptoResponseDto decript(String txt);
+    CriptoResponseDto decrypt(String txt);
 
 }

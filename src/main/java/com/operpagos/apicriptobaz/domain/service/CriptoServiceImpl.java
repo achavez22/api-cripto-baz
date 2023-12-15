@@ -5,18 +5,20 @@ import com.operpagos.apicriptobaz.domain.useCase.ICriptoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+
 @RequiredArgsConstructor
 @Service
 public class CriptoServiceImpl implements ICriptoUseCase {
     @Override
-    public CriptoResponseDto encript(String txt) {
+    public CriptoResponseDto encrypt(String txt) {
+        String result = "TEST_RESPONSE";
+        // TODO: implement CriptoBaz Library
 
-        String result = "";
         return new CriptoResponseDto(result);
     }
 
     @Override
-    public CriptoResponseDto decript(String txt) {
+    public CriptoResponseDto decrypt(String txt) {
         return null;
     }
 }
