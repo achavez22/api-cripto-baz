@@ -8,5 +8,5 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class CriptoResponseDto {
-    private String codedTxt;
+    private String txtResponse;
 }

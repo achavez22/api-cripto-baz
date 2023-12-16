@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping(value = "cripto")
+@RequestMapping(value = "criptoBaz")
 public class CriptoController{
 
    private final ICriptoUseCase criptoUseCase;
@@ -20,7 +20,21 @@ public class CriptoController{
 
    @PostMapping(path = "/encrypt")
    public ResponseEntity<CriptoResponseDto> encrypt(@RequestBody CriptoRequestDto request){
-      return ResponseEntity.ok(criptoUseCase.encrypt(request.getTxtRequest()));
+      try {
+         return ResponseEntity.ok(criptoUseCase.encrypt(request.getTxtRequest()));
+      } catch (Exception e) {
+         throw new RuntimeException(e);
+      }
+   }
+
+
+   @PostMapping(path = "/decrypt")
+   public ResponseEntity<CriptoResponseDto> decrypt(@RequestBody CriptoRequestDto request){
+      try {
+         return ResponseEntity.ok(criptoUseCase.decrypt(request.getTxtRequest()));
+      } catch (Exception e) {
+         throw new RuntimeException(e);
+      }
    }
 
 }

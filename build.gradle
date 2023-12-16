@@ -19,6 +19,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -28,9 +29,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.26'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.0'
 
-    implementation files('libs/CriptoBAZ.jar')
-
-
+    implementation files('libs/CriptoBAZ-1.0-SNAPSHOT.jar')
 }
 
 tasks.named('bootBuildImage') {
