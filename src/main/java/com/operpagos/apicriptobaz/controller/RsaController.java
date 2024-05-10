@@ -11,15 +11,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.crypto.NoSuchPaddingException;
-
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "rsa")
 public class RsaController {
     private final ICriptoRsaUseCase rsaUseCase;
 
-    @PostMapping(path = "/encrypt64")
+    @PostMapping(path = "/encrypt64",consumes = "application/json")
     public ResponseEntity<RsaResponseDto> encrypt(@RequestBody RsaRequestDto request){
         try {
             return ResponseEntity.ok(rsaUseCase.encrypt64(request.getText(), request.getKey()));
@@ -28,7 +26,7 @@ public class RsaController {
         }
     }
 
-    @PostMapping(path = "/decrypt64")
+    @PostMapping(path = "/decrypt64",consumes = "application/json")
     public ResponseEntity<RsaResponseDto> decrypt(@RequestBody RsaRequestDto request){
         try {
             return ResponseEntity.ok(rsaUseCase.decrypt64(request.getText(), request.getKey()));
