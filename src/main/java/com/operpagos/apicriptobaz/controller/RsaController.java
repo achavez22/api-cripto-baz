@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RsaController {
     private final ICriptoRsaUseCase rsaUseCase;
 
-    @PostMapping(path = "/encrypt64",consumes = "application/json")
+    @PostMapping(path = "/encrypt",consumes = "application/json")
     public ResponseEntity<RsaResponseDto> encrypt(@RequestBody RsaRequestDto request){
         try {
             return ResponseEntity.ok(rsaUseCase.encrypt64(request.getText(), request.getKey()));
@@ -26,7 +26,7 @@ public class RsaController {
         }
     }
 
-    @PostMapping(path = "/decrypt64",consumes = "application/json")
+    @PostMapping(path = "/decrypt",consumes = "application/json")
     public ResponseEntity<RsaResponseDto> decrypt(@RequestBody RsaRequestDto request){
         try {
             return ResponseEntity.ok(rsaUseCase.decrypt64(request.getText(), request.getKey()));
