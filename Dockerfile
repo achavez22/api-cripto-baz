@@ -22,12 +22,9 @@ RUN ./gradlew bootJar --no-daemon
 
 # Etapa de producción
 FROM openjdk:17-jdk-slim
-
 # Expone el puerto 8080
 EXPOSE 8080
-
 # Copia el archivo JAR compilado desde la etapa de construcción
-COPY --from=build /app/build/libs/api-cripto-baz-0.0.1.jar app.jar
-
+COPY --from=build /app/build/libs/api-cripto-baz-0.0.1-SNAPSHOT.jar app.jar
 # Comando para ejecutar la aplicación al iniciar el contenedor
 ENTRYPOINT ["java", "-jar", "app.jar"]
