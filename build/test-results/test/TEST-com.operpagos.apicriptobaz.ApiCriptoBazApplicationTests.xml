@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.operpagos.apicriptobaz.ApiCriptoBazApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-12T01:33:43" hostname="ADANCHAVEZ" time="0.74">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.operpagos.apicriptobaz.ApiCriptoBazApplicationTests" time="0.74"/>
+  <system-out><![CDATA[19:33:41.766 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.operpagos.apicriptobaz.ApiCriptoBazApplicationTests]: ApiCriptoBazApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:33:41.868 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.operpagos.apicriptobaz.ApiCriptoBazApplication for test class com.operpagos.apicriptobaz.ApiCriptoBazApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.6)
+
+2024-05-11T19:33:42.288-06:00  INFO 20608 --- [    Test worker] c.o.a.ApiCriptoBazApplicationTests       : Starting ApiCriptoBazApplicationTests using Java 17.0.6 with PID 20608 (started by adanc in C:\Users\adanc\IdeaProjects\api-cripto-baz)
+2024-05-11T19:33:42.290-06:00  INFO 20608 --- [    Test worker] c.o.a.ApiCriptoBazApplicationTests       : The following 1 profile is active: "dev"
+2024-05-11T19:33:43.738-06:00  INFO 20608 --- [    Test worker] c.o.a.ApiCriptoBazApplicationTests       : Started ApiCriptoBazApplicationTests in 1.697 seconds (process running for 2.843)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
